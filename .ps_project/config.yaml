@@ -8,7 +8,7 @@ workflows:
         params:
           command: nvidia-smi
           container: pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
-          machineType: "P6000"
+          machineType: "G1"
           modelPath: /storage/sjiphrwm
           modelType: PyTorch
       triggers:
