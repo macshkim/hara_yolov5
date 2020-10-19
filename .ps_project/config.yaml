@@ -1,0 +1,20 @@
+version: 2
+workflows:
+  experiment-workflow:
+    steps:
+      -
+        name: "train yolov5m on fld"
+        command: experiment.run_single_node
+        params:
+          command: nvidia-smi
+          container: pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
+          machineType: "P6000"
+          modelPath: /storage/sjiphrwm
+          modelType: PyTorch
+      triggers:
+        branches:
+          ignore: irrelevant-branch
+        tags:
+          only:
+            - v.*
+            - latest
