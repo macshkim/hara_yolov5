@@ -1,20 +1,12 @@
 version: 2
+
 workflows:
-  experiment-workflow:
+  single-node:
     steps:
       -
-        name: "train yolov5m on fld"
+        name: "single-node"
         command: experiment.run_single_node
         params:
           command: nvidia-smi
-          container: pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
-          machineType: "G1"
-          modelPath: /storage/sjiphrwm
-          modelType: PyTorch
-      triggers:
-        branches:
-          ignore: irrelevant-branch
-        tags:
-          only:
-            - v.*
-            - latest
+          container: tensorflow/tensorflow:1.13.1-gpu-py3
+          machineType: "K80"
