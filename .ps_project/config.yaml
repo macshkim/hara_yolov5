@@ -1,8 +1,16 @@
-command: python train.py --data ./data/fld.yaml --weights '' --cfg ./models/yolov5m.yaml --batch-size 40 --logdir /storag    e/sjiphrwm/ --device 0 &> /storage/sjiphrwm/train_yolov5m_fld.log
-container: nvcr.io/nvidia/pytorch:19.04-py3
-machineType: K80
-modelPath: /storage/sjiphrwm
-modelType: Pytorch
-name: yolov5
-workspace: 'https://github.com/macshkim/hara_yolov5.git'
+version: 2
 
+workflows:
+  single-node:
+    steps:
+      -
+        name: "single-node"
+        command: experiment.run_single_node
+        params:
+          command: nvidia-smi
+          container: nvcr.io/nvidia/pytorch:19.04-py3
+          command: "python train.py --data ./data/fld.yaml --weights '' --cfg ./models/yolov5m.yaml --batch-size 40 --logdir /storage/sjiphrwm/ --device 0 &> /storage/sjiphrwm/train_yolov5m_fld.log"
+          machineType: "K80"
+          modelPath: /storage/sjiphrwm
+          modelType: Pytorch
+          workspace: 'https://github.com/macshkim/hara_yolov5.git'
