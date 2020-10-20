@@ -8,5 +8,5 @@ workflows:
         command: experiment.run_single_node
         params:
           command: nvidia-smi
-          container: tensorflow/tensorflow:1.13.1-gpu-py3
+          container: nvcr.io/nvidia/pytorch:19.04-py3
           machineType: "K80"
