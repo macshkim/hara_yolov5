@@ -1,10 +1,10 @@
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-train: /Users/mackim/datasets/fld/train_fld.txt
-val: /Users/mackim/datasets/fld/val_fld.txt
-test: /Users/mackim/datasets/fld/test_fld.txt
+train: /storage/sjiphrwm/data/deepfashion_c/train_dfc.txt
+val: /storage/sjiphrwm/data/deepfashion_c/val_dfc.txt
+test: /storage/sjiphrwm/data/deepfashion_c/test_dfc.txt
 
 # number of classes
-nc: 3
+nc: 50
 
 # class names
-names: ['upper-body', 'lower-bod', 'full-body']
+names: ['Anorak', 'Blazer', 'Blouse', 'Bomber', 'Button-Down', 'Cardigan', 'Flannel', 'Halter', 'Henley', 'Hoodie', 'Jacket', 'Jersey', 'Parka', 'Peacoat', 'Poncho', 'Sweater', 'Tank', 'Tee', 'Top', 'Turtleneck', 'Capris', 'Chinos', 'Culottes', 'Cutoffs', 'Gauchos', 'Jeans', 'Jeggings', 'Jodhpurs', 'Joggers', 'Leggings', 'Sarong', 'Shorts', 'Skirt', 'Sweatpants', 'Sweatshorts', 'Trunks', 'Caftan', 'Cape', 'Coat', 'Coverup', 'Dress', 'Jumpsuit', 'Kaftan', 'Kimono', 'Nightdress', 'Onesie', 'Robe', 'Romper', 'Shirtdress', 'Sundress']
